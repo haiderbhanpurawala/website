@@ -1,0 +1,7 @@
+USE [BETA]
+GO
+
+IF EXISTS (SELECT * FROM dba.syscolumns WHERE id = OBJECT_ID(N'BETA_ACCT_MSTR') AND name = (N'AcctStatus'))
+BEGIN
+  ALTER TABLE Beta.dbo.BETA_ACCT_MSTR DROP COLUMN AcctStatus
+END
